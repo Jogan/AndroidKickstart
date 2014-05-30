@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">{app_name}Release</string>
+	<string name="launcher_name">{app_name}</string>
+</resources>
