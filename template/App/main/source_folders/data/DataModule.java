@@ -6,8 +6,8 @@ import android.net.Uri;
 import {package_name}.data.api.ApiModule;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.squareup.okhttp.HttpResponseCache;
 import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Cache;
 import com.squareup.picasso.OkHttpDownloader;
 import com.squareup.picasso.Picasso;
 import dagger.Module;
@@ -53,8 +53,8 @@ public final class DataModule {
         // Install an HTTP cache in the application cache directory.
         try {
             File cacheDir = new File(app.getCacheDir(), "http");
-            HttpResponseCache cache = new HttpResponseCache(cacheDir, DISK_CACHE_SIZE);
-            client.setResponseCache(cache);
+            Cache cache = new Cache(cacheDir, DISK_CACHE_SIZE);
+            client.setCache(cache);
         } catch (IOException e) {
             Timber.e(e, "Unable to install disk cache.");
         }
