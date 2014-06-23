@@ -36,7 +36,7 @@ class TemplateWriter():
 
 		base_app_folder = self.__app_base_folder()
 
-		base_test_folder = join(base_app_folder, 'src/instrumentTest/java')
+		base_test_folder = join(base_app_folder, 'src/androidTest/java')
 		base_source_folder = join(base_app_folder, 'src/main/java')
 		base_res_folder = join(base_app_folder, 'src/main/res')
 		#debug_res_folder = join(base_app_folder, 'src/debug/res')
